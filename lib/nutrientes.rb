@@ -1,5 +1,5 @@
-require "nutrientes/version"
 
-module Nutrientes
-  # Your code goes here...
+class Nutrientes
+ 
+
 end
