@@ -2,7 +2,7 @@ require 'lib/nutrientes'
 
 describe Nutrientes do
     before :each do
-        @ali = Nutrientes.new("huevo frito",14.1,0.0,19.5)
+        @ali = Nutrientes.new("Huevo frito",14.1,0.0,19.5)
     end
 
     describe " Creacion de objeto con el nombre" do
@@ -10,7 +10,7 @@ describe Nutrientes do
             expect(@ali.nombre).to eq("Huevo frito")
         end
         it "Debe existir la cantidad de proteínas del alimento en gramos" do
-            expect(@ali.proteina).to eq(14)
+            expect(@ali.proteina).to eq(14.1)
         end
         it "Debe existir la cantidad de glucido del alimento en gramos" do
             expect(@ali.glucidos).to eq(0.0)
