@@ -7,7 +7,7 @@ describe Nutrientes do
 
     describe " Creacion de objeto con el nombre" do
         it "Debe existir el nombre del alimento" do
-            expect(@ali).to_exist
+            expect(@ali.nombre).to eq("Huevo frito")
         end
     end
 
