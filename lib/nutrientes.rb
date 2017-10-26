@@ -10,7 +10,7 @@ class Nutrientes
     end
 
     def to_s
-        "Nombre: #{@nombre} --> [Proteinas , Glúcidos, Lípidos]:"
+        "Nombre: #{@nombre} --> [Proteinas=#{@proteina}, Glúcidos=#{@glucidos}, Lípidos=#{@lipidos}]:"
     end
 
     def valorEnergetico
