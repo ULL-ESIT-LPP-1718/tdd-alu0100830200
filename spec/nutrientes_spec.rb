@@ -22,8 +22,11 @@ describe Nutrientes do
     end
 
     describe "Prueba métodos del Alimento con los nutrientes" do
-        it "Existe un método para obtener el alimento formateado" do
+        it "Debe existir un método para obtener el alimento formateado" do
             expect(@ali.to_s).to eq("Nombre: #{@ali.nombre} --> [Proteinas , Glúcidos, Lípidos]:")
+        end
+        it "Debe existir un método para motrar el valor energético de alimento" do
+            expect(@ali.valorEnergetico).to eq(231.9)
         end
     end
 
