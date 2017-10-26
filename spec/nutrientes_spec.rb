@@ -21,6 +21,12 @@ describe Nutrientes do
 
     end
 
+    describe "Prueba métodos del Alimento con los nutrientes" do
+        it "Existe un método para obtener el alimento formateado" do
+            expect(@ali.to_s).to eq("Nombre: #{@ali.nombre} --> [Proteinas , Glúcidos, Lípidos]:")
+        end
+    end
+
 
 
 end
