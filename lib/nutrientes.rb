@@ -9,5 +9,8 @@ class Nutrientes
         @lipidos = lipidos
     end
 
+    def to_s
+        "Nombre: #{ali.nombre} --> [Proteinas , Glúcidos, Lípidos]:"
+    end
     
 end
