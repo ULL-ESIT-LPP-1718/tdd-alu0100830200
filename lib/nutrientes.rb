@@ -12,5 +12,9 @@ class Nutrientes
     def to_s
         "Nombre: #{@nombre} --> [Proteinas , Glúcidos, Lípidos]:"
     end
+
+    def valorEnergetico
+        valor = @proteina*4 + @glucidos*4 + @lipidos*9
+    end
     
 end
