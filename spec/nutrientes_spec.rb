@@ -177,8 +177,19 @@ describe Lista::Lista do
    it "Creacion del objeto lista vacía con su cabeza y su cola" do
        expect(@lista).not_to be(nil)
    end
-   
+
    it "Se puede insertar un elemento en la lista" do
     @lista.push_node(1)
+   end
+
+   it "Se puede insertar varios elementos en la lista" do
+    @lista.push_node(2)
+    @lista.push_node(3)
+    @lista.push_node(4)
+    @lista.push_node(5)
+   end
+
+   it "Se extrae el primer elemento de la lista" do
+    @lista.pop_front()
    end
 end
