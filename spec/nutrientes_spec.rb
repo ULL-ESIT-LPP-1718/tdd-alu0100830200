@@ -278,4 +278,21 @@ describe Nutrientes::AliGrasos do
         @chocolate = Nutrientes::AliGrasos.new("Chocolate",5.3,47.0,30.0)
         @mantequilla = Nutrientes::AliGrasos.new("Mantequilla",0.7,0.0,83.2)
     end
+    it "Comprobar tipo" do
+        expect(@aceite).to be_instance_of(Nutrientes::AliGrasos)
+        expect(@chocolate).to be_instance_of(Nutrientes::AliGrasos)
+        expect(@mantequilla).to be_instance_of(Nutrientes::AliGrasos)
+        
+    end
+    it "Comprobar clase" do
+        expect(@aceite).to be_a(Nutrientes::AliGrasos)
+        expect(@chocolate).to be_a(Nutrientes::AliGrasos)
+        expect(@mantequilla).to be_a(Nutrientes::AliGrasos)
+        
+    end
+    it "Comprobar pertenencia" do
+        expect(@aceite).to be_kind_of(Nutrientes::Nutrientes)
+        expect(@chocolate).to be_kind_of(Nutrientes::Nutrientes)
+        expect(@mantequilla).to be_kind_of(Nutrientes::Nutrientes) 
+    end
 end
