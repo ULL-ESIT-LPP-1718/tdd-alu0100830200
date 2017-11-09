@@ -247,3 +247,11 @@ describe Nutrientes::Carnes do
         expect(@pollo).to be_kind_of(Nutrientes::Nutrientes) 
     end
 end
+
+describe Nutrientes::Mariscos do
+    before :all do        
+        @bacalao = Nutrientes::Mariscos.new("Bacalao",17.7,0.0,0.4)
+        @atun = Nutrientes::Mariscos.new("Atún",21.5,0.0,15.5)
+        @salmon = Nutrientes::Mariscos.new("Salmón",19.9,0.0,13.6)
+    end
+end
