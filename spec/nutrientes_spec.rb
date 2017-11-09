@@ -296,3 +296,12 @@ describe Nutrientes::AliGrasos do
         expect(@mantequilla).to be_kind_of(Nutrientes::Nutrientes) 
     end
 end
+
+describe Nutrientes::AliCarbo do
+    before :all do        
+        @arroz = Nutrientes::AliCarbo.new("Arroz",6.8,77.7,0.6)
+        @lentejas = Nutrientes::AliCarbo.new("Lentejas",23.5,52.0,1.4)
+        @papas = Nutrientes::AliCarbo.new("Papas",2.0,15.4,0.1)
+        @azucar = Nutrientes::AliCarbo.new("azucar",0.0,99.8,0.0)
+    end
+end
