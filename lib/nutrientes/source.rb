@@ -51,5 +51,13 @@ module Lista
                @tail = aux
             end
         end
+
+        def pop_front()
+            aux = @head
+            @head = @head.next
+            @head.prev = nil
+            aux.next = nil
+            aux.prev = nil
+        end
     end
 end
