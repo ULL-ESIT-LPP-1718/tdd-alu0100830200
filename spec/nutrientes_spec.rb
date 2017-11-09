@@ -192,4 +192,7 @@ describe Lista::Lista do
    it "Se extrae el primer elemento de la lista" do
     @lista.pop_front()
    end
+   it "Se extrae el ultimo elemento de la lista" do
+    @lista.pop_back()
+   end
 end
