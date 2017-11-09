@@ -332,4 +332,18 @@ describe Nutrientes::Verduras do
         @tomate = Nutrientes::Verduras.new("Tomate",1.0,3.5,0.2)
         @cebolla = Nutrientes::Verduras.new("Cebolla",1.3,5.8,0.3)
     end
+    it "Comprobar tipo" do
+        expect(@tomate).to be_instance_of(Nutrientes::Verduras)
+        expect(@cebolla).to be_instance_of(Nutrientes::Verduras)
+        
+    end
+    it "Comprobar clase" do
+        expect(@tomate).to be_a(Nutrientes::Verduras)
+        expect(@cebolla).to be_a(Nutrientes::Verduras)
+        
+    end
+    it "Comprobar pertenencia" do
+        expect(@tomate).to be_kind_of(Nutrientes::Nutrientes)
+        expect(@cebolla).to be_kind_of(Nutrientes::Nutrientes)
+    end
 end
