@@ -36,11 +36,17 @@ module Nutrientes
             super(nombre,proteina,glucidos,lipidos)
         end
     end
-    
+
     class AliGrasos < Nutrientes
         def initialize(nombre,proteina,glucidos,lipidos)
             super(nombre,proteina,glucidos,lipidos)
         end
+    end
+
+    class AliCarbo < Nutrientes
+        def initialize(nombre,proteina,glucidos,lipidos)
+            super(nombre,proteina,glucidos,lipidos)
+        end 
     end
 end
 
