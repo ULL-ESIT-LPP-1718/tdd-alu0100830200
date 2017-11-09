@@ -347,3 +347,10 @@ describe Nutrientes::Verduras do
         expect(@cebolla).to be_kind_of(Nutrientes::Nutrientes)
     end
 end
+
+describe Nutrientes::Frutas do
+    before :all do        
+        @manzana = Nutrientes::Frutas.new("Manzana",0.3,12.4,0.4)
+        @platanos = Nutrientes::Frutas.new("Plátanos",1.2,21.4,0.2)
+    end
+end
