@@ -353,4 +353,18 @@ describe Nutrientes::Frutas do
         @manzana = Nutrientes::Frutas.new("Manzana",0.3,12.4,0.4)
         @platanos = Nutrientes::Frutas.new("Plátanos",1.2,21.4,0.2)
     end
+    it "Comprobar tipo" do
+        expect(@manzana).to be_instance_of(Nutrientes::Frutas)
+        expect(@platanos).to be_instance_of(Nutrientes::Frutas)
+        
+    end
+    it "Comprobar clase" do
+        expect(@manzana).to be_a(Nutrientes::Frutas)
+        expect(@platanos).to be_a(Nutrientes::Frutas)
+        
+    end
+    it "Comprobar pertenencia" do
+        expect(@manzana).to be_kind_of(Nutrientes::Nutrientes)
+        expect(@platanos).to be_kind_of(Nutrientes::Nutrientes)
+    end
 end
