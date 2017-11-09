@@ -24,6 +24,12 @@ module Nutrientes
             super(nombre,proteina,glucidos,lipidos)
         end
     end
+    
+    class Carnes < Nutrientes
+        def initialize(nombre,proteina,glucidos,lipidos)
+            super(nombre,proteina,glucidos,lipidos)
+        end 
+    end
 end
 
 module Lista
