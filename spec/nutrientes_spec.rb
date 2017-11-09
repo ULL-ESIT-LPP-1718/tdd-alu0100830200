@@ -168,3 +168,13 @@ describe Nutrientes::Nutrientes do
     end
 
 end
+
+describe Lista::Lista do
+    before :all do
+       @lista = Lista::Lista.new() 
+   end
+
+   it "Creacion del objeto lista vacía con su cabeza y su cola" do
+       expect(@lista).not_to be(nil)
+   end
+end
