@@ -30,5 +30,26 @@ module Lista
             @head = nil
             @tail = nil
         end
+
+        def empty()
+            if(@head == nil)
+                true
+            else
+                false
+            end
+        end
+
+        def push_node(value)
+            if(empty())
+                aux = Node.new(nil,value,nil)                
+                @tail = aux
+                @head = aux
+            else
+               aux = Node.new(tail,value,nil)                                
+               @tail.next = aux
+               aux.prev = @tail
+               @tail = aux
+            end
+        end
     end
 end
