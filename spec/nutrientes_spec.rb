@@ -177,4 +177,8 @@ describe Lista::Lista do
    it "Creacion del objeto lista vacía con su cabeza y su cola" do
        expect(@lista).not_to be(nil)
    end
+   
+   it "Se puede insertar un elemento en la lista" do
+    @lista.push_node(1)
+   end
 end
