@@ -254,4 +254,21 @@ describe Nutrientes::Mariscos do
         @atun = Nutrientes::Mariscos.new("Atún",21.5,0.0,15.5)
         @salmon = Nutrientes::Mariscos.new("Salmón",19.9,0.0,13.6)
     end
+    it "Comprobar tipo" do
+        expect(@bacalao).to be_instance_of(Nutrientes::Mariscos)
+        expect(@atun).to be_instance_of(Nutrientes::Mariscos)
+        expect(@salmon).to be_instance_of(Nutrientes::Mariscos)
+        
+    end
+    it "Comprobar clase" do
+        expect(@bacalao).to be_a(Nutrientes::Mariscos)
+        expect(@atun).to be_a(Nutrientes::Mariscos)
+        expect(@salmon).to be_a(Nutrientes::Mariscos)
+        
+    end
+    it "Comprobar pertenencia" do
+        expect(@bacalao).to be_kind_of(Nutrientes::Nutrientes)
+        expect(@atun).to be_kind_of(Nutrientes::Nutrientes)
+        expect(@salmon).to be_kind_of(Nutrientes::Nutrientes) 
+    end
 end
