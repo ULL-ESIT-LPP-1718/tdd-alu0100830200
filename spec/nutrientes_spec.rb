@@ -1,27 +1,29 @@
+require "spec_helper.rb"
 
-require 'lib/nutrientes'
 
-describe Nutrientes do
+describe Nutrientes::Nutrientes do
     before :each do
-        @ali0 = Nutrientes.new("Huevo frito",14.1,0.0,19.5)
-        @ali1 = Nutrientes.new("Leche vaca",3.3,4.8,3.2)
-        @ali2 = Nutrientes.new("Yogurt",3.8,4.9,3.8)
-        @ali3 = Nutrientes.new("Cerdo",21.5,0.0,6.3)
-        @ali4 = Nutrientes.new("Ternera",21.1,0.0,3.1)
-        @ali5 = Nutrientes.new("Pollo",20.6,0.0,5.6)
-        @ali6 = Nutrientes.new("Bacalao",17.7,0.0,0.4)
-        @ali7 = Nutrientes.new("Atún",21.5,0.0,15.5)
-        @ali8 = Nutrientes.new("Salmón",19.9,0.0,13.6)
-        @ali9 = Nutrientes.new("Aceite de oliva",0.0,0.2,99.6)
-        @ali10 = Nutrientes.new("Chocolate",5.3,47.0,30.0)
-        @ali11 = Nutrientes.new("Azúcar",0.0,99.8,0.0)
-        @ali12 = Nutrientes.new("Arroz",6.8,77.7,0.6)
-        @ali13 = Nutrientes.new("Lentejas",23.5,52.0,1.4)
-        @ali14 = Nutrientes.new("Papas",2.0,15.4,0.1)
-        @ali15 = Nutrientes.new("Tomate",1.0,3.5,0.2)
-        @ali16 = Nutrientes.new("Cebolla",1.3,5.8,0.3)
-        @ali17 = Nutrientes.new("Manzana",0.3,12.4,0.4)
-        @ali18 = Nutrientes.new("Plátanos",1.2,21.4,0.2)
+        @ali0 = Nutrientes::Nutrientes.new("Huevo frito",14.1,0.0,19.5)
+        @ali1 = Nutrientes::Nutrientes.new("Leche vaca",3.3,4.8,3.2)
+        @ali2 = Nutrientes::Nutrientes.new("Yogurt",3.8,4.9,3.8)
+        @ali3 = Nutrientes::Nutrientes.new("Cerdo",21.5,0.0,6.3)
+        @ali4 = Nutrientes::Nutrientes.new("Ternera",21.1,0.0,3.1)
+        @ali5 = Nutrientes::Nutrientes.new("Pollo",20.6,0.0,5.6)
+        @ali6 = Nutrientes::Nutrientes.new("Bacalao",17.7,0.0,0.4)
+        @ali7 = Nutrientes::Nutrientes.new("Atún",21.5,0.0,15.5)
+        @ali8 = Nutrientes::Nutrientes.new("Salmón",19.9,0.0,13.6)
+        @ali9 = Nutrientes::Nutrientes.new("Aceite de oliva",0.0,0.2,99.6)
+        @ali10 = Nutrientes::Nutrientes.new("Chocolate",5.3,47.0,30.0)
+        @ali11 = Nutrientes::Nutrientes.new("Azúcar",0.0,99.8,0.0)
+        @ali12 = Nutrientes::Nutrientes.new("Arroz",6.8,77.7,0.6)
+        @ali13 = Nutrientes::Nutrientes.new("Lentejas",23.5,52.0,1.4)
+        @ali14 = Nutrientes::Nutrientes.new("Papas",2.0,15.4,0.1)
+        @ali15 = Nutrientes::Nutrientes.new("Tomate",1.0,3.5,0.2)
+        @ali16 = Nutrientes::Nutrientes.new("Cebolla",1.3,5.8,0.3)
+        @ali17 = Nutrientes::Nutrientes.new("Manzana",0.3,12.4,0.4)
+        @ali18 = Nutrientes::Nutrientes.new("Plátanos",1.2,21.4,0.2)
+        @ali19 = Nutrientes::Nutrientes.new("Calabaza",1.1,4.8,0.1)
+        
     end
 
     describe " 1º Creacion de objeto con el nombre" do
@@ -68,7 +70,6 @@ describe Nutrientes do
             expect(@ali17.proteina).to eq(0.3)
             expect(@ali18.proteina).to eq(1.2)
             
-
         end
         it "Debe existir la cantidad de glucido del alimento en gramos" do
             expect(@ali0.glucidos).to eq(0.0)
@@ -163,10 +164,7 @@ describe Nutrientes do
             expect(@ali17.valorEnergetico).to eq(54.400000000000006)
             expect(@ali18.valorEnergetico).to eq(92.19999999999999)
 
-
         end
     end
 
 end
-
-
