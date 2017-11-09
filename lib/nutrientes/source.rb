@@ -66,5 +66,14 @@ module Lista
             aux.next = nil
             aux.prev = nil
         end
+        def to_s
+            aux = @head
+            cadena = ""
+            while (aux != nil)
+                cadena += "#{aux.value} "
+                aux = aux.next
+            end
+            cadena
+        end
     end
 end
