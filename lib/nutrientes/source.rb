@@ -59,5 +59,12 @@ module Lista
             aux.next = nil
             aux.prev = nil
         end
+        def pop_back
+            aux = @tail
+            @tail = @tail.prev
+            @tail.next = nil
+            aux.next = nil
+            aux.prev = nil
+        end
     end
 end
