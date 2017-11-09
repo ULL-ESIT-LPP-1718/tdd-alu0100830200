@@ -229,4 +229,21 @@ describe Nutrientes::Carnes do
         @ternera = Nutrientes::Carnes.new("Ternera",21.1,0.0,3.1)
         @pollo = Nutrientes::Carnes.new("Pollo",20.6,0.0,5.6)
     end
+    it "Comprobar tipo" do
+        expect(@cerdo).to be_instance_of(Nutrientes::Carnes)
+        expect(@ternera).to be_instance_of(Nutrientes::Carnes)
+        expect(@pollo).to be_instance_of(Nutrientes::Carnes)
+        
+    end
+    it "Comprobar clase" do
+        expect(@cerdo).to be_a(Nutrientes::Carnes)
+        expect(@ternera).to be_a(Nutrientes::Carnes)
+        expect(@pollo).to be_a(Nutrientes::Carnes)
+        
+    end
+    it "Comprobar pertenencia" do
+        expect(@cerdo).to be_kind_of(Nutrientes::Nutrientes)
+        expect(@ternera).to be_kind_of(Nutrientes::Nutrientes)
+        expect(@pollo).to be_kind_of(Nutrientes::Nutrientes) 
+    end
 end
