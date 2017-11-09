@@ -48,6 +48,12 @@ module Nutrientes
             super(nombre,proteina,glucidos,lipidos)
         end 
     end
+
+    class Verduras < Nutrientes
+        def initialize(nombre,proteina,glucidos,lipidos)
+            super(nombre,proteina,glucidos,lipidos)
+        end
+    end
 end
 
 module Lista
