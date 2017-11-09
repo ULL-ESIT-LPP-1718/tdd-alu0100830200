@@ -19,3 +19,16 @@ module Nutrientes
 
     end
 end
+
+module Lista
+    class Lista
+        attr_reader :tail, :head
+
+        Node = Struct.new(:prev, :value, :next)
+        
+        def initialize()
+            @head = nil
+            @tail = nil
+        end
+    end
+end
