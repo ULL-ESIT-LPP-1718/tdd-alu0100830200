@@ -326,3 +326,10 @@ describe Nutrientes::AliCarbo do
         expect(@azucar).to be_kind_of(Nutrientes::Nutrientes) 
     end
 end
+
+describe Nutrientes::Verduras do
+    before :all do        
+        @tomate = Nutrientes::Verduras.new("Tomate",1.0,3.5,0.2)
+        @cebolla = Nutrientes::Verduras.new("Cebolla",1.3,5.8,0.3)
+    end
+end
