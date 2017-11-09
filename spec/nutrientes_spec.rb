@@ -203,4 +203,22 @@ describe Nutrientes::Lacteos do
         @leche = Nutrientes::Lacteos.new("Leche vaca",3.3,4.8,3.2)
         @yogurt = Nutrientes::Lacteos.new("Yogurt",3.8,4.9,3.8)
     end
+    it "Comprobar tipo" do
+        expect(@huevo).to be_instance_of(Nutrientes::Lacteos)
+        expect(@leche).to be_instance_of(Nutrientes::Lacteos)
+        expect(@yogurt).to be_instance_of(Nutrientes::Lacteos)
+        
+    end
+    it "Comprobar clase" do
+        expect(@huevo).to be_a(Nutrientes::Lacteos)
+        expect(@leche).to be_a(Nutrientes::Lacteos)
+        expect(@yogurt).to be_a(Nutrientes::Lacteos)
+        
+    end
+    it "Comprobar pertenencia" do
+        expect(@huevo).to be_kind_of(Nutrientes::Nutrientes)
+        expect(@leche).to be_kind_of(Nutrientes::Nutrientes)
+        expect(@yogurt).to be_kind_of(Nutrientes::Nutrientes)
+        
+    end
 end
