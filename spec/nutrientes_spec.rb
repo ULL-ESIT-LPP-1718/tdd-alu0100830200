@@ -196,3 +196,11 @@ describe Lista::Lista do
     @lista.pop_back()
    end
 end
+
+describe Nutrientes::Lacteos do
+    before :all do
+        @huevo = Nutrientes::Lacteos.new("Huevo",14.1,0.0,19.5)  
+        @leche = Nutrientes::Lacteos.new("Leche vaca",3.3,4.8,3.2)
+        @yogurt = Nutrientes::Lacteos.new("Yogurt",3.8,4.9,3.8)
+    end
+end
