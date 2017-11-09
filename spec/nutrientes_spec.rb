@@ -222,3 +222,11 @@ describe Nutrientes::Lacteos do
         
     end
 end
+
+describe Nutrientes::Carnes do
+    before :all do
+        @cerdo = Nutrientes::Carnes.new("Cerdo",21.5,0.0,6.3)
+        @ternera = Nutrientes::Carnes.new("Ternera",21.1,0.0,3.1)
+        @pollo = Nutrientes::Carnes.new("Pollo",20.6,0.0,5.6)
+    end
+end
