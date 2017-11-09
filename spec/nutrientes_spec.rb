@@ -272,3 +272,10 @@ describe Nutrientes::Mariscos do
         expect(@salmon).to be_kind_of(Nutrientes::Nutrientes) 
     end
 end
+describe Nutrientes::AliGrasos do
+    before :all do        
+        @aceite = Nutrientes::AliGrasos.new("Aceite de oliva",0.0,0.2,99.6)
+        @chocolate = Nutrientes::AliGrasos.new("Chocolate",5.3,47.0,30.0)
+        @mantequilla = Nutrientes::AliGrasos.new("Mantequilla",0.7,0.0,83.2)
+    end
+end
