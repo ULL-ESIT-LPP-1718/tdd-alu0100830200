@@ -304,4 +304,25 @@ describe Nutrientes::AliCarbo do
         @papas = Nutrientes::AliCarbo.new("Papas",2.0,15.4,0.1)
         @azucar = Nutrientes::AliCarbo.new("azucar",0.0,99.8,0.0)
     end
+    it "Comprobar tipo" do
+        expect(@arroz).to be_instance_of(Nutrientes::AliCarbo)
+        expect(@lentejas).to be_instance_of(Nutrientes::AliCarbo)
+        expect(@papas).to be_instance_of(Nutrientes::AliCarbo)
+        expect(@azucar).to be_instance_of(Nutrientes::AliCarbo)
+        
+        
+    end
+    it "Comprobar clase" do
+        expect(@arroz).to be_a(Nutrientes::AliCarbo)
+        expect(@lentejas).to be_a(Nutrientes::AliCarbo)
+        expect(@papas).to be_a(Nutrientes::AliCarbo)
+        expect(@azucar).to be_a(Nutrientes::AliCarbo)
+        
+    end
+    it "Comprobar pertenencia" do
+        expect(@arroz).to be_kind_of(Nutrientes::Nutrientes)
+        expect(@lentejas).to be_kind_of(Nutrientes::Nutrientes)
+        expect(@papas).to be_kind_of(Nutrientes::Nutrientes)
+        expect(@azucar).to be_kind_of(Nutrientes::Nutrientes) 
+    end
 end
