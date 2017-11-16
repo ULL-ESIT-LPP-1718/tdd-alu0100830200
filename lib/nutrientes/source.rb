@@ -1,5 +1,6 @@
 module Nutrientes
     class Nutrientes
+        include Comparable
         attr_reader :nombre, :proteina, :glucidos, :lipidos
     
         def initialize(nombre,proteina,glucidos,lipidos)
@@ -67,12 +68,12 @@ module Lista
 
         Node = Struct.new(:prev, :value, :next)
         
-        def initialize()
+        def initialize
             @head = nil
             @tail = nil
         end
 
-        def empty()
+        def empty
             if(@head == nil)
                 true
             else
@@ -81,32 +82,40 @@ module Lista
         end
 
         def push_node(value)
-            if(empty())
+            if(empty)
                 aux = Node.new(nil,value,nil)                
                 @tail = aux
                 @head = aux
+                return @tail.value
             else
                aux = Node.new(tail,value,nil)                                
                @tail.next = aux
                aux.prev = @tail
                @tail = aux
+               return @tail.value
             end
         end
 
-        def pop_front()
+        def pop_front
             aux = @head
+            val = @head.value
             @head = @head.next
             @head.prev = nil
             aux.next = nil
             aux.prev = nil
+            return val   
         end
+
         def pop_back
             aux = @tail
+            val = @tail.value
             @tail = @tail.prev
             @tail.next = nil
             aux.next = nil
             aux.prev = nil
+            return val
         end
+
         def to_s
             aux = @head
             cadena = ""

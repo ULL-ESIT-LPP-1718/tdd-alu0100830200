@@ -1,6 +1,5 @@
 require "spec_helper.rb"
 
-
 describe Nutrientes::Nutrientes do
     before :each do
         @ali0 = Nutrientes::Nutrientes.new("Huevo frito",14.1,0.0,19.5)
@@ -179,21 +178,21 @@ describe Lista::Lista do
    end
 
    it "Se puede insertar un elemento en la lista" do
-    @lista.push_node(1)
+    expect(@lista.push_node(1)).to eq(1)
    end
 
    it "Se puede insertar varios elementos en la lista" do
-    @lista.push_node(2)
-    @lista.push_node(3)
-    @lista.push_node(4)
-    @lista.push_node(5)
+    expect(@lista.push_node(@huevo)).to eq(@huevo)
+    expect(@lista.push_node(@leche)).to eq(@leche)
+    expect(@lista.push_node(@yogurt)).to eq(@yogurt)
+    expect(@lista.push_node(@mantequilla)).to eq(@mantequilla)
    end
 
    it "Se extrae el primer elemento de la lista" do
-    @lista.pop_front()
+    expect(@lista.pop_front()).to eq(1)
    end
    it "Se extrae el ultimo elemento de la lista" do
-    @lista.pop_back()
+    expect(@lista.pop_back()).to eq(@mantequilla)
    end
 end
 
