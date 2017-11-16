@@ -2,6 +2,7 @@
 # Author:: Kristian Martínez García (mailto:alu0100830200@ull.edu.es)
 # Copyright:: Creative Commons
 # License:: Distributes under the same term as Ruby
+# Asignatura: Lenguajes y paradigmas de la programación
 
 # Modulo Nutrientes que incluye clases y sus metodos. 
 module Nutrientes
@@ -172,7 +173,7 @@ module Lista
             aux = @head
             cadena = ""
             while (aux != nil)
-                cadena += "#{aux.value} "
+                cadena += "#{aux.value}"
                 aux = aux.next
             end
             cadena
