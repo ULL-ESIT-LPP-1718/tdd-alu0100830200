@@ -219,6 +219,10 @@ describe Lista::Lista do
     expect(@lista.pop_back()).to eq(@mantequilla)
    end
 
+   describe "Enumerando elementos de la lista" do
+    it "Mostrar elementos enumerados con map" do
+        expect(@lista.map { |i| i }).to eq([@huevo,@leche,@yogurt])
+    end
 
 end
 
