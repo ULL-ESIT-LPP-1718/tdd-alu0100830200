@@ -86,6 +86,14 @@ module Lista
             end
         end
 
+        def each
+            aux = @head
+            while (aux != nil)
+                yield aux.value
+                aux = aux.next
+            end
+        end
+
         def push_node(value)
             if(empty)
                 aux = Node.new(nil,value,nil)                
