@@ -18,6 +18,10 @@ module Nutrientes
             valor = @proteina*4 + @glucidos*4 + @lipidos*9
         end
 
+        def <=>(anOther)
+            valorEnergetico <=> anOther.valorEnergetico
+        end
+
     end
 
     class Lacteos < Nutrientes
