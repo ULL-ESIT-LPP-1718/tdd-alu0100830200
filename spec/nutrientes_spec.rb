@@ -220,9 +220,13 @@ describe Lista::Lista do
    end
 
    describe "Enumerando elementos de la lista" do
-    it "Mostrar elementos enumerados con map" do
-        expect(@lista.map { |i| i }).to eq([@huevo,@leche,@yogurt])
-    end
+        it "Mostrar elementos enumerados con map" do
+            expect(@lista.map { |i| i }).to eq([@huevo,@leche,@yogurt])
+        end
+        it "Mostrar elementos enumerados con collect" do
+            expect(@lista.collect { |i| i }).to eq([@huevo,@leche,@yogurt])
+        end
+   end
 
 end
 
