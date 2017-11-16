@@ -171,6 +171,11 @@ describe Nutrientes::Nutrientes do
             expect(@ali1 < @ali0).to be(true)
             expect(@ali0 < @ali1).to be(false)
         end
+        it "Comparando mayor estricto valorEnergetico" do
+            expect(@ali0 > @ali1).to be(true)
+            expect(@ali1 > @ali0).to be(false)
+        end
+
     end
 end
 
