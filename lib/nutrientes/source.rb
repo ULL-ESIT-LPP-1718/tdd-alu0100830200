@@ -69,7 +69,8 @@ end
 module Lista
     class Lista
         attr_reader :tail, :head
-
+        
+        include Enumerable        
         Node = Struct.new(:prev, :value, :next)
         
         def initialize
