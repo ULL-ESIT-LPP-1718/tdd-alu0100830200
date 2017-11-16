@@ -166,6 +166,30 @@ describe Nutrientes::Nutrientes do
         end
     end
 
+    describe "Comparaciones de alimentos" do
+        it "Comparando menor estricto valorEnergetico" do
+            expect(@ali1 < @ali0).to be(true)
+            expect(@ali0 < @ali1).to be(false)
+        end
+        it "Comparando mayor estricto valorEnergetico" do
+            expect(@ali0 > @ali1).to be(true)
+            expect(@ali1 > @ali0).to be(false)
+        end
+        it "Comparando igual valorEnergetico" do
+            expect(@ali0 == @ali0).to be(true)
+            expect(@ali1 == @ali0).to be(false)
+        end
+        it "Comparando menor igual valorEnergetico" do
+            expect(@ali1 <= @ali0).to be(true)
+            expect(@ali0 == @ali1).to be(false)
+            expect(@ali1 == @ali1).to be(true)
+        end
+        it "Comparando mayor igual valorEnergetico" do
+            expect(@ali0 > @ali1).to be(true)
+            expect(@ali0 == @ali0).to be(true)
+        end
+
+    end
 end
 
 describe Lista::Lista do
@@ -194,6 +218,16 @@ describe Lista::Lista do
    it "Se extrae el ultimo elemento de la lista" do
     expect(@lista.pop_back()).to eq(@mantequilla)
    end
+
+   describe "Enumerando elementos de la lista" do
+        it "Mostrar elementos enumerados con map" do
+            expect(@lista.map { |i| i }).to eq([@huevo,@leche,@yogurt])
+        end
+        it "Mostrar elementos enumerados con collect" do
+            expect(@lista.collect { |i| i }).to eq([@huevo,@leche,@yogurt])
+        end
+   end
+
 end
 
 describe Nutrientes::Lacteos do
