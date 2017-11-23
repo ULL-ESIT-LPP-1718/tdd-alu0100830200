@@ -42,6 +42,10 @@ module Nutrientes
             vec_aux
         end
 
+        #Método para calcular el índice glucémico de la persona
+        def indGlInd(individuo,glucosa)
+            ind_gluc = self.aibc[individuo]*100/glucosa.aibc[individuo]
+        end
         # Método para obtener el valor energético de cada alimento
         def valorEnergetico
             valor = @proteina*4 + @glucidos*4 + @lipidos*9
