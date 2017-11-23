@@ -27,6 +27,8 @@ module Nutrientes
             "Nombre: #{@nombre} --> [Proteinas=#{@proteina}, Glúcidos=#{@glucidos}, Lípidos=#{@lipidos}]:"
         end
 
+
+
         # Método para obtener el valor energético de cada alimento
         def valorEnergetico
             valor = @proteina*4 + @glucidos*4 + @lipidos*9

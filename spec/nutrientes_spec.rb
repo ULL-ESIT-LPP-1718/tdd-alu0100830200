@@ -176,6 +176,20 @@ describe Nutrientes::Nutrientes do
         end
     end
 
+    describe "3º Pruebas sobre el indice glucémico de los alimentos: " do
+        it "Valor Indice Glucémico de los alimentos" do
+            expect(@chocolate.indGlAli(@glucosa)).to eq(13.328114527479904)
+            expect(@chocolate.indGlInd(0,@glucosa)).to eq(2.9296875000000027)
+            expect(@chocolate.indGlInd(1,@glucosa)).to eq(23.726541554959805)
+            expect(@yogurt.indGlAli(@glucosa)).to eq(41.37941416722519)
+            expect(@yogurt.indGlInd(0,@glucosa)).to eq(8.49609375000002)
+            expect(@yogurt.indGlInd(1,@glucosa)).to eq(74.26273458445037)
+            expect(@compota.indGlAli(@glucosa)).to eq(54.49978007707774)
+            expect(@compota.indGlInd(0,@glucosa)).to eq(10.742187499999998)
+            expect(@compota.indGlInd(1,@glucosa)).to eq(98.25737265415547)
+            
+        end
+
     describe "Comparaciones de alimentos" do
         it "Comparando menor estricto valorEnergetico" do
             expect(@ali1 < @ali0).to be(true)
