@@ -27,7 +27,20 @@ module Nutrientes
             "Nombre: #{@nombre} --> [Proteinas=#{@proteina}, Glúcidos=#{@glucidos}, Lípidos=#{@lipidos}]:"
         end
 
-
+        #Método para calcular el área incremental bajo la curva
+        def aibc
+            vec_aux = []
+            @vec_aibc.each do |value|
+                s=[]
+                value.each_with_index do |val,j|
+                    if(j!=0)
+                        s << (((val-value[0])+ (value[j-1]-value[0]))*5)/2
+                    end
+                end
+                vec_aux << s.reduce(:+)
+            end
+            vec_aux
+        end
 
         # Método para obtener el valor energético de cada alimento
         def valorEnergetico
