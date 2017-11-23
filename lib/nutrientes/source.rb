@@ -11,7 +11,7 @@ module Nutrientes
         # Incluyendo modulo Comparable
         include Comparable
         # Atributos de la Clase Nutrientes accesibles con cualquier metodo de la clase.
-        attr_reader :nombre, :proteina, :glucidos, :lipidos
+        attr_reader :nombre, :proteina, :glucidos, :lipidos, :vec_aibc
     
         # Método initialize para definir el objeto con los atributos
         def initialize(nombre,proteina,glucidos,lipidos)
@@ -19,6 +19,7 @@ module Nutrientes
             @proteina = proteina
             @glucidos = glucidos
             @lipidos = lipidos
+            @vec_aibc = vec
         end
 
         # Método para mostrar el flujo de salida formateda
