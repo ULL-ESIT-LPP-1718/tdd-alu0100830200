@@ -16,7 +16,7 @@ module Nutrientes
         attr_reader :nombre, :proteina, :glucidos, :lipidos, :vec_aibc
     
         # Método initialize para definir el objeto con los atributos
-        def initialize(nombre,proteina,glucidos,lipidos)
+        def initialize(nombre,proteina,glucidos,lipidos,vec)
             @nombre = nombre
             @proteina = proteina
             @glucidos = glucidos

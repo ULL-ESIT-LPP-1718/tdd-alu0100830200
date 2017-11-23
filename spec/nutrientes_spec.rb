@@ -28,8 +28,7 @@ describe Nutrientes::Nutrientes do
         @yogurt = Nutrientes::Nutrientes.new("Yogurt",0,0,0,[[6.1,6.6,6.3,6.3,6.1,6.9,6.8,6.5,6.4,6.9,6.8,6.5,6.3,6.2,6.7,6.2,5.9,5.8,5.8,5.8,5.8,5.8,5.9,6.2,6.4],
         [4.9,4.9,5.2,5.8,6.5,7.0,7.2,7.3,7.3,6.6,6.2,6.1,6.0,6.1,5.9,5.9,5.9,5.9,5.8,5.8,5.5,5.5,5.6,5.9,5.9]])
         @glucosa = Nutrientes::Nutrientes.new("Glucosa",0,0,0,[[4.9,5.3,5.9,6.7,7.2,7.6,8.0,8.2,8.2,8.4,8.3,8.3,8.0,7.5,7.1,6.8,6.8,6.9,6.8,6.3,6.2,6.3,6.2,6.3,6.1],
-        [6.3,5.4,5.6,5.7,6.5,7.4,7.9,7.4,7.7,7.9,7.9,7.8,7.8,7.8,8.0,8.5,9.4,10.8,10.5,9.1,8.9,8.3,7.7,7.6,7.5],
-        [4.9,4.9,5.2,5.8,6.5,7.0,7.2,7.3,7.3,6.6,6.2,6.1,6.0,6.1,5.9,5.9,5.9,5.9,5.8,5.8,5.5,5.5,5.6,5.9,5.9]])
+        [6.3,5.4,5.6,5.7,6.5,7.4,7.9,7.4,7.7,7.9,7.9,7.8,7.8,7.8,8.0,8.5,9.4,10.8,10.5,9.1,8.9,8.3,7.7,7.6,7.5]])
         @compota = Nutrientes::Nutrientes.new("Compota",0,0,0,[[6.7,6.5,6.8,6.9,7.0,7.1,6.9,6.9,6.9,6.7,6.9,7.3,7.0,7.0,7.2,7.1,6.8,7.2,7.3,7.0,6.8,6.7,6.8,6.7,6.9],
     [4.6,4.8,5.3,5.6,6.1,6.5,6.6,7.0,7.0,6.8,6.4,6.3,6.1,6.1,6.2,6.0,6.1,6.1,6.2,6.3,6.4,6.1,6.1,5.7,5.9]])
         
@@ -257,9 +256,9 @@ end
 
 describe Nutrientes::Lacteos do
     before :all do
-        @huevo = Nutrientes::Lacteos.new("Huevo",14.1,0.0,19.5)  
-        @leche = Nutrientes::Lacteos.new("Leche vaca",3.3,4.8,3.2)
-        @yogurt = Nutrientes::Lacteos.new("Yogurt",3.8,4.9,3.8)
+        @huevo = Nutrientes::Lacteos.new("Huevo",14.1,0.0,19.5,0)  
+        @leche = Nutrientes::Lacteos.new("Leche vaca",3.3,4.8,3.2,0)
+        @yogurt = Nutrientes::Lacteos.new("Yogurt",3.8,4.9,3.8,0)
     end
     it "Comprobar tipo" do
         expect(@huevo).to be_instance_of(Nutrientes::Lacteos)
@@ -283,9 +282,9 @@ end
 
 describe Nutrientes::Carnes do
     before :all do
-        @cerdo = Nutrientes::Carnes.new("Cerdo",21.5,0.0,6.3)
-        @ternera = Nutrientes::Carnes.new("Ternera",21.1,0.0,3.1)
-        @pollo = Nutrientes::Carnes.new("Pollo",20.6,0.0,5.6)
+        @cerdo = Nutrientes::Carnes.new("Cerdo",21.5,0.0,6.3,0)
+        @ternera = Nutrientes::Carnes.new("Ternera",21.1,0.0,3.1,0)
+        @pollo = Nutrientes::Carnes.new("Pollo",20.6,0.0,5.6,0)
     end
     it "Comprobar tipo" do
         expect(@cerdo).to be_instance_of(Nutrientes::Carnes)
@@ -308,9 +307,9 @@ end
 
 describe Nutrientes::Mariscos do
     before :all do        
-        @bacalao = Nutrientes::Mariscos.new("Bacalao",17.7,0.0,0.4)
-        @atun = Nutrientes::Mariscos.new("Atún",21.5,0.0,15.5)
-        @salmon = Nutrientes::Mariscos.new("Salmón",19.9,0.0,13.6)
+        @bacalao = Nutrientes::Mariscos.new("Bacalao",17.7,0.0,0.4,0)
+        @atun = Nutrientes::Mariscos.new("Atún",21.5,0.0,15.5,0)
+        @salmon = Nutrientes::Mariscos.new("Salmón",19.9,0.0,13.6,0)
     end
     it "Comprobar tipo" do
         expect(@bacalao).to be_instance_of(Nutrientes::Mariscos)
@@ -332,9 +331,9 @@ describe Nutrientes::Mariscos do
 end
 describe Nutrientes::AliGrasos do
     before :all do        
-        @aceite = Nutrientes::AliGrasos.new("Aceite de oliva",0.0,0.2,99.6)
-        @chocolate = Nutrientes::AliGrasos.new("Chocolate",5.3,47.0,30.0)
-        @mantequilla = Nutrientes::AliGrasos.new("Mantequilla",0.7,0.0,83.2)
+        @aceite = Nutrientes::AliGrasos.new("Aceite de oliva",0.0,0.2,99.6,0)
+        @chocolate = Nutrientes::AliGrasos.new("Chocolate",5.3,47.0,30.0,0)
+        @mantequilla = Nutrientes::AliGrasos.new("Mantequilla",0.7,0.0,83.2,0)
     end
     it "Comprobar tipo" do
         expect(@aceite).to be_instance_of(Nutrientes::AliGrasos)
@@ -357,10 +356,10 @@ end
 
 describe Nutrientes::AliCarbo do
     before :all do        
-        @arroz = Nutrientes::AliCarbo.new("Arroz",6.8,77.7,0.6)
-        @lentejas = Nutrientes::AliCarbo.new("Lentejas",23.5,52.0,1.4)
-        @papas = Nutrientes::AliCarbo.new("Papas",2.0,15.4,0.1)
-        @azucar = Nutrientes::AliCarbo.new("azucar",0.0,99.8,0.0)
+        @arroz = Nutrientes::AliCarbo.new("Arroz",6.8,77.7,0.6,0)
+        @lentejas = Nutrientes::AliCarbo.new("Lentejas",23.5,52.0,1.4,0)
+        @papas = Nutrientes::AliCarbo.new("Papas",2.0,15.4,0.1,0)
+        @azucar = Nutrientes::AliCarbo.new("azucar",0.0,99.8,0.0,0)
     end
     it "Comprobar tipo" do
         expect(@arroz).to be_instance_of(Nutrientes::AliCarbo)
@@ -387,8 +386,8 @@ end
 
 describe Nutrientes::Verduras do
     before :all do        
-        @tomate = Nutrientes::Verduras.new("Tomate",1.0,3.5,0.2)
-        @cebolla = Nutrientes::Verduras.new("Cebolla",1.3,5.8,0.3)
+        @tomate = Nutrientes::Verduras.new("Tomate",1.0,3.5,0.2,0)
+        @cebolla = Nutrientes::Verduras.new("Cebolla",1.3,5.8,0.3,0)
     end
     it "Comprobar tipo" do
         expect(@tomate).to be_instance_of(Nutrientes::Verduras)
@@ -408,8 +407,8 @@ end
 
 describe Nutrientes::Frutas do
     before :all do        
-        @manzana = Nutrientes::Frutas.new("Manzana",0.3,12.4,0.4)
-        @platanos = Nutrientes::Frutas.new("Plátanos",1.2,21.4,0.2)
+        @manzana = Nutrientes::Frutas.new("Manzana",0.3,12.4,0.4,0)
+        @platanos = Nutrientes::Frutas.new("Plátanos",1.2,21.4,0.2,0)
     end
     it "Comprobar tipo" do
         expect(@manzana).to be_instance_of(Nutrientes::Frutas)
