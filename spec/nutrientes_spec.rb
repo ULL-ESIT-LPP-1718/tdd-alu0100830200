@@ -189,6 +189,7 @@ describe Nutrientes::Nutrientes do
             expect(@compota.indGlInd(1,@glucosa)).to eq(98.25737265415547)
             
         end
+    end
 
     describe "Comparaciones de alimentos" do
         it "Comparando menor estricto valorEnergetico" do

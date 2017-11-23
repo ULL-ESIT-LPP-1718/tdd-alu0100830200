@@ -10,6 +10,8 @@ module Nutrientes
     class Nutrientes
         # Incluyendo modulo Comparable
         include Comparable
+        # Incluyendo modulo Enumerable
+        include Enumerable
         # Atributos de la Clase Nutrientes accesibles con cualquier metodo de la clase.
         attr_reader :nombre, :proteina, :glucidos, :lipidos, :vec_aibc
     
@@ -70,55 +72,55 @@ module Nutrientes
     # Clase lacteos heredada de Nutrientes
     class Lacteos < Nutrientes
         # Método initialize para definir un objeto Lacteos con los atributos
-        def initialize(nombre,proteina,glucidos,lipidos)
-            super(nombre,proteina,glucidos,lipidos)
+        def initialize(nombre,proteina,glucidos,lipidos,vec)
+            super(nombre,proteina,glucidos,lipidos,vec)
         end
     end
 
     # Clase Carnes heredada de Nutrientes
     class Carnes < Nutrientes
         # Método initialize para definir un objeto Carnes con los atributos apropiados
-        def initialize(nombre,proteina,glucidos,lipidos)
-            super(nombre,proteina,glucidos,lipidos)
+        def initialize(nombre,proteina,glucidos,lipidos,vec)
+            super(nombre,proteina,glucidos,lipidos,vec)
         end 
     end
 
     # Clase Mariscos heredada de Nutrientes
     class Mariscos < Nutrientes
         # Método initialize para definir un objeto Marisco con los atributos apropiados
-        def initialize(nombre,proteina,glucidos,lipidos)
-            super(nombre,proteina,glucidos,lipidos)
+        def initialize(nombre,proteina,glucidos,lipidos,vec)
+            super(nombre,proteina,glucidos,lipidos,vec)
         end
     end
 
     # Clase AliGrasos heredada de Nutrientes
     class AliGrasos < Nutrientes
-        def initialize(nombre,proteina,glucidos,lipidos)
-            super(nombre,proteina,glucidos,lipidos)
+        def initialize(nombre,proteina,glucidos,lipidos,vec)
+            super(nombre,proteina,glucidos,lipidos,vec)
         end
     end
 
      # Clase AliCarbo heredada de Nutrientes
     class AliCarbo < Nutrientes
         # Método initialize para definir un objeto Verdura con los atributos
-        def initialize(nombre,proteina,glucidos,lipidos)
-            super(nombre,proteina,glucidos,lipidos)
+        def initialize(nombre,proteina,glucidos,lipidos,vec)
+            super(nombre,proteina,glucidos,lipidos,vec)
         end 
     end
 
     # Clase Verduras heredada de Nutrientes
     class Verduras < Nutrientes
         #Método initialize para definir un objeto Verdura con los atributos
-        def initialize(nombre,proteina,glucidos,lipidos)
-            super(nombre,proteina,glucidos,lipidos)
+        def initialize(nombre,proteina,glucidos,lipidos,vec)
+            super(nombre,proteina,glucidos,lipidos,vec)
         end
     end
 
     # Clase Frutas heredada de Nutrientes
     class Frutas < Nutrientes
         # Método initialize para definir un objeto Fruta con los atributos
-        def initialize(nombre,proteina,glucidos,lipidos)
-            super(nombre,proteina,glucidos,lipidos)
+        def initialize(nombre,proteina,glucidos,lipidos,vec)
+            super(nombre,proteina,glucidos,lipidos,vec)
         end
     end 
 end
