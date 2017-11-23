@@ -42,6 +42,15 @@ module Nutrientes
             vec_aux
         end
 
+        #Método para calcular el índice glucémico del alimento
+        def indGlAli(glucosa)
+            indGlAli = []
+            @vec_aibc.each_with_index do |value,j| 
+                indGlAli << indGlInd(j,glucosa)
+            end
+            (indGlAli.reduce(:+))/@vec_aibc.size
+        end 
+
         #Método para calcular el índice glucémico de la persona
         def indGlInd(individuo,glucosa)
             ind_gluc = self.aibc[individuo]*100/glucosa.aibc[individuo]
