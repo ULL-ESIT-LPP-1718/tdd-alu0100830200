@@ -441,3 +441,56 @@ describe Nutrientes::Frutas do
         expect(@platanos).to be_kind_of(Nutrientes::Nutrientes)
     end
 end
+
+@lista = Lista::Lista.new() 
+
+       @huevo = Nutrientes::Nutrientes.new("Huevo frito",14.1,0.0,19.5,0)
+       @leche = Nutrientes::Nutrientes.new("Leche vaca",3.3,4.8,3.2,0)
+       @yogurt = Nutrientes::Nutrientes.new("Yogurt",3.8,4.9,3.8,0)
+       @cerdo = Nutrientes::Nutrientes.new("Cerdo",21.5,0.0,6.3,0)
+       @ternera = Nutrientes::Nutrientes.new("Ternera",21.1,0.0,3.1,0)
+       @pollo = Nutrientes::Nutrientes.new("Pollo",20.6,0.0,5.6,0)
+       @bacalao = Nutrientes::Nutrientes.new("Bacalao",17.7,0.0,0.4,0)
+       @atun = Nutrientes::Nutrientes.new("Atún",21.5,0.0,15.5,0)
+       @salmon = Nutrientes::Nutrientes.new("Salmón",19.9,0.0,13.6,0)
+       @aceite = Nutrientes::Nutrientes.new("Aceite de oliva",0.0,0.2,99.6,0)
+       @chocolate = Nutrientes::Nutrientes.new("Chocolate",5.3,47.0,30.0,0)
+       @azucar = Nutrientes::Nutrientes.new("Azúcar",0.0,99.8,0.0,0)
+       @arroz = Nutrientes::Nutrientes.new("Arroz",6.8,77.7,0.6,0)
+       @lentejas = Nutrientes::Nutrientes.new("Lentejas",23.5,52.0,1.4,0)
+       @papas = Nutrientes::Nutrientes.new("Papas",2.0,15.4,0.1,0)
+       @tomate = Nutrientes::Nutrientes.new("Tomate",1.0,3.5,0.2,0)
+       @cebolla = Nutrientes::Nutrientes.new("Cebolla",1.3,5.8,0.3,0)
+       @manzana = Nutrientes::Nutrientes.new("Manzana",0.3,12.4,0.4,0)
+       @platanos = Nutrientes::Nutrientes.new("Plátanos",1.2,21.4,0.2,0)
+       @calabaza = Nutrientes::Nutrientes.new("Calabaza",1.1,4.8,0.1,0)
+
+       @tabla = Lista::Lista.new()
+
+       @lista.push_node(@huevo)
+       @lista.push_node(@yogurt)
+       @lista.push_node(@cerdo)
+       @lista.push_node(@ternera)
+       @lista.push_node(@pollo)
+       @lista.push_node(@bacalao)
+       @lista.push_node(@atun)
+       @lista.push_node(@aceite)
+       @lista.push_node(@chocolate)
+       @lista.push_node(@azucar)
+       @lista.push_node(@arroz)
+       @lista.push_node(@lentejas)
+       @lista.push_node(@papas)
+       @lista.push_node(@tomate)
+       @lista.push_node(@cebolla)
+       @lista.push_node(@manzana)
+       @lista.push_node(@platanos)
+       @lista.push_node(@calabaza)
+
+       include Benchmark
+
+       Benchmark.benchmark(CAPTION, 7, FORMAT, ">total:", ">avg:") do |x|
+        tf = x.report("For:") {@lista.for}
+        tf = x.report("Sort:") {@lista.sort}
+        tf = x.report("Each:") {@lista.each1}
+
+       end
