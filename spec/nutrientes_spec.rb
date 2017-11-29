@@ -257,6 +257,11 @@ describe Lista::Lista do
         expect(@lista.for).to eq([@tomate,@calabaza,@cebolla,@manzana,@leche,@yogurt,@papas,@bacalao,@platanos,@ternera,
         @pollo,@cerdo,@atun,@huevo,@lentejas,@arroz,@azucar,@chocolate,@aceite]) 
     end
+    it "Ordenando con sort" do
+        expect(@lista.sort).to eq([@tomate,@calabaza,@cebolla,@manzana,@leche,@yogurt,@papas,@bacalao,@platanos,@ternera,
+        @pollo,@cerdo,@atun,@huevo,@lentejas,@arroz,@azucar,@chocolate,@aceite]) 
+        #puts @lista.sort
+    end
 
 end
 
