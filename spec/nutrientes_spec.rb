@@ -262,6 +262,11 @@ describe Lista::Lista do
         @pollo,@cerdo,@atun,@huevo,@lentejas,@arroz,@azucar,@chocolate,@aceite]) 
         #puts @lista.sort
     end
+    it "Ordenando con each" do
+        expect(@lista.each1).to eq([@tomate,@calabaza,@cebolla,@manzana,@leche,@yogurt,@papas,@bacalao,@platanos,@ternera,
+        @pollo,@cerdo,@atun,@huevo,@lentejas,@arroz,@azucar,@chocolate,@aceite]) 
+        #puts @lista.sort
+    end
 
 end
 
