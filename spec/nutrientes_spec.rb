@@ -252,6 +252,12 @@ describe Lista::Lista do
         end
    end
 
+   describe "Comparando alimentos" do
+    it "Ordenando con for" do
+        expect(@lista.for).to eq([@tomate,@calabaza,@cebolla,@manzana,@leche,@yogurt,@papas,@bacalao,@platanos,@ternera,
+        @pollo,@cerdo,@atun,@huevo,@lentejas,@arroz,@azucar,@chocolate,@aceite]) 
+    end
+
 end
 
 describe Nutrientes::Lacteos do
