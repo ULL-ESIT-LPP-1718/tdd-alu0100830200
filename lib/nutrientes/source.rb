@@ -199,6 +199,28 @@ module Lista
             return val
         end
 
+        #Metodo for para ordenar
+        def for
+            aux = @head
+            vec = []
+            
+            while (aux != nil)
+                vec << aux.value
+                aux = aux.next
+            end
+
+            for i in 1..vec.size-1
+                for j in 0..vec.size-i-1
+                    if(vec[j] > vec[j+1])
+                        k=vec[j+1]
+                         vec[j+1]=vec[j]
+                         vec[j]=k
+                    end
+                end
+            end
+            vec 
+        end
+
         # Método para mostrar el flujo de salida formateda
         def to_s
             aux = @head
