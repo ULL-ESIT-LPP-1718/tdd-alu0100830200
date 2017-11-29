@@ -199,6 +199,32 @@ module Lista
             return val
         end
 
+        #Metodo para ordenar con EACH
+        def each1
+            aux = @head
+            vec = []
+            
+            while (aux != nil)
+                vec << aux.value
+                aux = aux.next
+            end
+
+                vec.each.with_index(1) do |val,i|
+                    if(i < vec.size-1)
+                        vec.each.with_index(0) do |n,j|
+                            if(j < vec.size-i)
+                                if(vec[j] > vec[j+1])
+                                    k=vec[j+1]
+                                    vec[j+1]=vec[j]
+                                    vec[j]=k
+                                end
+                            end
+                        end
+                    end
+                end
+            vec
+        end
+
         #Metodo for para ordenar
         def for
             aux = @head
