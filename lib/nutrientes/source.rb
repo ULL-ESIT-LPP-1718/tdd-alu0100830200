@@ -26,7 +26,7 @@ module Nutrientes
 
         # Método para mostrar el flujo de salida formateda
         def to_s
-            "Nombre: #{@nombre} --> [Proteinas=#{@proteina}, Glúcidos=#{@glucidos}, Lípidos=#{@lipidos}]:"
+            "[#{@nombre},Proteinas=#{@proteina}, Glúcidos=#{@glucidos}, Lípidos=#{@lipidos}]:"
         end
 
         #Método para calcular el área incremental bajo la curva
