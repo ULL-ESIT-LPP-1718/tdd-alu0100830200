@@ -13,7 +13,7 @@ module Nutrientes
         # Incluyendo modulo Enumerable
         include Enumerable
         # Atributos de la Clase Nutrientes accesibles con cualquier metodo de la clase.
-        attr_reader :nombre, :proteina, :glucidos, :lipidos, :vec_aibc
+        attr_reader :nombre, :proteina, :glucidos, :lipidos, :vec_aibc, :vec_ali
     
         # Método initialize para definir el objeto con los atributos
         def initialize(nombre,proteina,glucidos,lipidos,vec)
