@@ -308,5 +308,11 @@ module Plato
                  instance_eval(&block) 
                 end
               end
+            end
 
-        end
+            def vegetal(name, options = {})
+                ingredient = @lista_alimentos[name.downcase]
+                amount = options[:porcion]
+                aux = [ingredient,amount]
+                @vec_vegetales << aux[0]
+            end
