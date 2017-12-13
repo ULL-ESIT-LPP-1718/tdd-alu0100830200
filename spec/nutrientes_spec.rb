@@ -537,13 +537,28 @@ end
        @lista.push_node(@platanos)
        @lista.push_node(@calabaza)
 
-       include Benchmark
+describe Plato::Plato do
+    before :all do
+        @lentejas_arroz = Plato::Plato.new("\nLentejas con arroz, salsa de tomate, huevo y plátano a la plancha") do
+            vegetal     "Tomate",
+            :porcion => "2 piezas pequeñas"
+            fruta       "Platano",
+            :gramos =>  "20 gr"
+            cereal      "Arroz",
+            :porcion => "1 taza"
+            proteina    "Lentejas",
+            :porcion => "1/2 cucharón"
+            proteina    "Huevo",
+            :porcion => "1 pieza"
+            aceite      "Aceite",
+            :porcion => "1/2 cucharada"
+        end
+        
+    end
+    
+    it "Mostrar tabla" do
+       puts @lentejas_arroz
+    end
 
-       Benchmark.benchmark(CAPTION, 7, FORMAT, ">total:", ">avg:") do |x|
-        tf = x.report("For:") {@lista.for}
-        tf = x.report("Sort:") {@lista.sort}
-        tf = x.report("Each:") {@lista.each1}
-
-       end
-  
+end
 
