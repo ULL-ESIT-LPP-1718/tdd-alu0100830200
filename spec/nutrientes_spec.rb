@@ -557,7 +557,7 @@ describe Plato::Plato do
     end
     
     it "Mostrar tabla" do
-       puts @lentejas_arroz
+        puts @lentejas_arroz
     end
 
 end
