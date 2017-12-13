@@ -329,4 +329,11 @@ module Plato
                 amount = options[:porcion]
                 aux = [ingredient,amount]
                 @vec_cereal << aux[0]
-             end
+            end
+
+            def proteina(name, options = {})
+                ingredient = @lista_alimentos[name.downcase]
+                amount = options[:porcion]
+                aux = [ingredient,amount]
+                @vec_proteina << aux[0]
+            end
