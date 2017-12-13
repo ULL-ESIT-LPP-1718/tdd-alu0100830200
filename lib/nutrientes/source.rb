@@ -316,3 +316,10 @@ module Plato
                 aux = [ingredient,amount]
                 @vec_vegetales << aux[0]
             end
+
+            def fruta(name, options = {})
+                ingredient = @lista_alimentos[name.downcase]
+                amount = options[:gramos] 
+                aux = [ingredient,amount]
+                @vec_fruta << aux[0]
+            end
