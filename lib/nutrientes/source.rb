@@ -313,64 +313,74 @@ module Plato
             def vegetal(name, options = {})
                 ingredient = @lista_alimentos[name.downcase]
                 amount = options[:porcion]
+                amount = amount.split(/\W+/)
+                amount[0] = amount[0].to_i                
                 aux = [ingredient,amount]
-                @vec_vegetales << aux[0]
+                @vec_vegetales << aux
             end
 
             def fruta(name, options = {})
                 ingredient = @lista_alimentos[name.downcase]
-                amount = options[:gramos] 
+                amount = options[:porcion]
+                amount = amount.split(/\W+/)
+                amount[0] = amount[0].to_i                
                 aux = [ingredient,amount]
-                @vec_fruta << aux[0]
+                @vec_fruta << aux
             end
 
             def cereal(name, options = {})
                 ingredient = @lista_alimentos[name.downcase]
                 amount = options[:porcion]
+                amount = amount.split(/\W+/)
+                amount[0] = amount[0].to_i                
                 aux = [ingredient,amount]
-                @vec_cereal << aux[0]
+                @vec_cereal << aux
             end
 
             def proteina(name, options = {})
                 ingredient = @lista_alimentos[name.downcase]
                 amount = options[:porcion]
+                amount = amount.split(/\W+/)
+                amount[0] = amount[0].to_i                
                 aux = [ingredient,amount]
-                @vec_proteina << aux[0]
+                @vec_proteina << aux
             end
 
             def aceite(name, options = {})
                 ingredient = @lista_alimentos[name.downcase]
                 amount = options[:porcion]
+                amount = amount.split(/\W+/)
+                amount[0] = amount[0].to_i
                 aux = [ingredient,amount]  
-                @vec_aceite << aux[0]          
+                @vec_aceite << aux          
             end
             
             def to_s
-                medidas = { "gramos" => 20, "tazas" => 1, "piezas" => 2 }
+                medidas = { "gramos" => 0.02, "tazas" => 1, "piezas" => 2, "cucharon" => 1, "cucharada" => 1}
                 sum = 0
                 output = @name
                 output << "\n#{'=' * @name.size}\n\n"
                 output << "Composición nutricional: \n"
                 output << "             Glúcidos     Proteínas     Lípidos     Valor Energético\n"
                 @vec_vegetales.each do |i| 
-                   output << i.nombre << "       " << i.glucidos.to_s << "          " << i.proteina.to_s << "           " << i.lipidos.to_s << "         " << (i.valorEnergetico*medidas["piezas"]).to_s << "\n"
-                   sum = i.valorEnergetico*medidas["piezas"]
+                   output << i[0].nombre << "       " << i[0].glucidos.to_s << "          " << i[0].proteina.to_s << "           " << i[0].lipidos.to_s << "         " << (i[0].valorEnergetico*medidas[i[1][1]]*i[1][0]).to_s << "\n"
+                   sum += i[0].valorEnergetico*medidas[i[1][1]]*i[1][0]
                 end
                 @vec_fruta.each do |i| 
-                    output << i.nombre << "     " << i.glucidos.to_s << "         " << i.proteina.to_s << "           " << i.lipidos.to_s << "         " << (i.valorEnergetico*medidas["gramos"]).to_s << "\n"
-                    sum += i.valorEnergetico*medidas["gramos"]
+                    output << i[0].nombre << "     " << i[0].glucidos.to_s << "         " << i[0].proteina.to_s << "           " << i[0].lipidos.to_s << "         " << (i[0].valorEnergetico*medidas[i[1][1]]*i[1][0]).to_s << "\n"
+                    sum += i[0].valorEnergetico**medidas[i[1][1]]*i[1][0]
                 end
                 @vec_cereal.each do |i| 
-                   output << i.nombre << "        " << i.glucidos.to_s << "         " << i.proteina.to_s << "           " << i.lipidos.to_s << "         " << (i.valorEnergetico*medidas["tazas"]).to_s << "\n"
-                   sum += i.valorEnergetico*medidas["tazas"]
+                   output << i[0].nombre << "        " << i[0].glucidos.to_s << "         " << i[0].proteina.to_s << "           " << i[0].lipidos.to_s << "         " << (i[0].valorEnergetico*medidas[i[1][1]]*i[1][0]).to_s << "\n"
+                   sum += i[0].valorEnergetico*medidas[i[1][1]]*i[1][0]
                 end
                 @vec_proteina.each do |i| 
-                    output << i.nombre << "     " << i.glucidos.to_s << "        " << i.proteina.to_s << "           " << i.lipidos.to_s << "         " << i.valorEnergetico.to_s << "\n"     
-                    sum += i.valorEnergetico        
+                    output << i[0].nombre << "     " << i[0].glucidos.to_s << "        " << i[0].proteina.to_s << "           " << i[0].lipidos.to_s << "         " << (i[0].valorEnergetico*medidas[i[1][1]]*i[1][0]).to_s << "\n"     
+                    sum += i[0].valorEnergetico*medidas[i[1][1]]*i[1][0]    
                 end
                 @vec_aceite.each do |i| 
-                    output << i.nombre << "   " << i.glucidos.to_s << "       " << i.proteina.to_s << "            " << i.lipidos.to_s << "        " << i.valorEnergetico.to_s << "\n"
-                    sum += i.valorEnergetico       
+                    output << i[0].nombre << "   " << i[0].glucidos.to_s << "       " << i[0].proteina.to_s << "            " << i[0].lipidos.to_s << "        " << (i[0].valorEnergetico*medidas[i[1][1]]*i[1][0]).to_s << "\n"
+                    sum += i[0].valorEnergetico*medidas[i[1][1]]*i[1][0]
                 end
                 output << "Valor energético total                              " << sum.to_s
     

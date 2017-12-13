@@ -541,17 +541,17 @@ describe Plato::Plato do
     before :all do
         @lentejas_arroz = Plato::Plato.new("\nLentejas con arroz, salsa de tomate, huevo y plátano a la plancha") do
             vegetal     "Tomate",
-            :porcion => "2 piezas pequeñas"
+            :porcion => "2 piezas"
             fruta       "Platano",
-            :gramos =>  "20 gr"
+            :porcion =>  "20 gramos"
             cereal      "Arroz",
-            :porcion => "1 taza"
+            :porcion => "1 tazas"
             proteina    "Lentejas",
-            :porcion => "1/2 cucharón"
+            :porcion => "1 cucharon"
             proteina    "Huevo",
-            :porcion => "1 pieza"
+            :porcion => "1 piezas"
             aceite      "Aceite",
-            :porcion => "1/2 cucharada"
+            :porcion => "1 cucharada"
         end
         
     end
