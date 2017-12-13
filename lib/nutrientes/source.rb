@@ -344,3 +344,40 @@ module Plato
                 aux = [ingredient,amount]  
                 @vec_aceite << aux[0]          
             end
+            
+            def to_s
+                medidas = { "gramos" => 20, "tazas" => 1, "piezas" => 2 }
+                sum = 0
+                output = @name
+                output << "\n#{'=' * @name.size}\n\n"
+                output << "Composición nutricional: \n"
+                output << "             Glúcidos     Proteínas     Lípidos     Valor Energético\n"
+                @vec_vegetales.each do |i| 
+                   output << i.nombre << "       " << i.glucidos.to_s << "          " << i.proteina.to_s << "           " << i.lipidos.to_s << "         " << (i.valorEnergetico*medidas["piezas"]).to_s << "\n"
+                   sum = i.valorEnergetico*medidas["piezas"]
+                end
+                @vec_fruta.each do |i| 
+                    output << i.nombre << "     " << i.glucidos.to_s << "         " << i.proteina.to_s << "           " << i.lipidos.to_s << "         " << (i.valorEnergetico*medidas["gramos"]).to_s << "\n"
+                    sum += i.valorEnergetico*medidas["gramos"]
+                end
+                @vec_cereal.each do |i| 
+                   output << i.nombre << "        " << i.glucidos.to_s << "         " << i.proteina.to_s << "           " << i.lipidos.to_s << "         " << (i.valorEnergetico*medidas["tazas"]).to_s << "\n"
+                   sum += i.valorEnergetico*medidas["tazas"]
+                end
+                @vec_proteina.each do |i| 
+                    output << i.nombre << "     " << i.glucidos.to_s << "        " << i.proteina.to_s << "           " << i.lipidos.to_s << "         " << i.valorEnergetico.to_s << "\n"     
+                    sum += i.valorEnergetico        
+                end
+                @vec_aceite.each do |i| 
+                    output << i.nombre << "   " << i.glucidos.to_s << "       " << i.proteina.to_s << "            " << i.lipidos.to_s << "        " << i.valorEnergetico.to_s << "\n"
+                    sum += i.valorEnergetico       
+                end
+                output << "Valor energético total                              " << sum.to_s
+    
+                output
+            
+            end
+    
+        end
+    
+    end
